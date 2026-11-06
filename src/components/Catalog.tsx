@@ -44,12 +44,12 @@ export function Catalog({
   return (
     <div className="catalog-grid">
       {visible.length === 0 ? <p className="empty-note">Nothing in the shop matches those filters.</p> : null}
-      {visible.map((product, index) => (
+      {visible.map((product) => (
         <ProductCard key={product.id} product={product} showTitle={showTitle} />
       ))}
       {clipped.length > 0 ? (
         <div className="row-clip">
-          {clipped.map((product, index) => (
+          {clipped.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
