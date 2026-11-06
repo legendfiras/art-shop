@@ -23,8 +23,8 @@ export function ProductCard({
     <article className="card">
       <Link to={`/product/${product.id}`} className="card-link">
         <div className="plate">
-          {product.image ? <img className="plate-art" src={product.image} alt="" /> : null}
-          {product.salePattern ? <img className="sale-pattern" src="/assets/sale-pattern.svg" alt="" /> : null}
+          {product.image ? <img className="plate-art" src={product.image} alt={product.title} /> : null}
+          {product.salePattern && !product.image ? <img className="sale-pattern" src="/assets/sale-pattern.svg" alt="" /> : null}
           <img className={`stamp stamp-${product.stamp}`} src={stamps[product.stamp]} alt="" />
         </div>
         <p className="price">

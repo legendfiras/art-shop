@@ -31,8 +31,8 @@ export function ProductPage() {
   return (
     <main className="page product-page">
       <div className="product-plate">
-        {listing.image ? <img src={listing.image} alt="" /> : null}
-        {listing.salePattern ? <img className="sale-pattern" src="/assets/sale-pattern.svg" alt="" /> : null}
+        {listing.image ? <img src={listing.image} alt={listing.title} /> : null}
+        {listing.salePattern && !listing.image ? <img className="sale-pattern" src="/assets/sale-pattern.svg" alt="" /> : null}
       </div>
       <div>
         <p className="kicker">{listing.category}</p>

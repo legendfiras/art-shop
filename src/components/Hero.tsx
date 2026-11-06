@@ -26,6 +26,16 @@ export function Hero() {
             <span>{blob.label}</span>
           </Link>
         ))}
+        <video
+          className="hero-jump"
+          src="/assets/artwork.webm?v=2"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        />
       </div>
     </section>
   );

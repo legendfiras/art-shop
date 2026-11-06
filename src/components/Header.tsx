@@ -10,7 +10,7 @@ export function Header({ overlay }: { overlay?: boolean }) {
   const count = cart.reduce((sum, item) => sum + item.qty, 0);
 
   useEffect(() => {
-    const media = window.matchMedia("(min-width: 900px)");
+    const media = window.matchMedia("(min-width: 1200px)");
     const sync = () => setOpen(Boolean(overlay) && media.matches);
     sync();
     media.addEventListener("change", sync);
@@ -27,7 +27,7 @@ export function Header({ overlay }: { overlay?: boolean }) {
         <div
           className={open ? "shop-link is-open" : "shop-link"}
           onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(Boolean(overlay) && window.matchMedia("(min-width: 900px)").matches)}
+          onMouseLeave={() => setOpen(Boolean(overlay) && window.matchMedia("(min-width: 1200px)").matches)}
         >
           <NavLink to="/shop" className="nav-button">
             shop
